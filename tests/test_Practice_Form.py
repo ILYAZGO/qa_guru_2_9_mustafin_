@@ -15,11 +15,13 @@ from tests.utils import attach
 @allure.feature("DemoQA")
 @allure.story("Регистрация пользователя")
 def test_registration_form(browser_preconfig):
+
     # GIVEN
-    with allure.step("Open registrations form"):
+    with allure.step("Open registration form"):
         given_opened('/automation-practice-form')
         browser.driver.execute_script("$('footer').remove()")
         browser.driver.execute_script("$('#fixedban').remove()")
+
     # WHEN
     with allure.step("Fill form"):
         browser.should(have.title('ToolsQA'))
@@ -37,6 +39,7 @@ def test_registration_form(browser_preconfig):
         # select_city(city)
         select_state_and_city(state, city)
         submit_button.click()
+
     # THEN
     with allure.step("Check form results"):
         submition_table_title.should(be.visible)
@@ -50,6 +53,7 @@ def test_registration_form(browser_preconfig):
         submition_table.should(have.text('kitty.jpeg'))
         submition_table.should(have.text(address))
         submition_table.should(have.text('Uttar Pradesh Agra'))
+
     with allure.step("Attachments"):
         attach.add_screenshot(browser)
         attach.add_logs(browser)
