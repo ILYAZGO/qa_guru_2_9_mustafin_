@@ -31,7 +31,7 @@ def test_registration_form(browser_preconfig):
         calendar.input(day, month, year)
         fill_out_subject_with_addition(subject1, subject2)
         checkbox.select_necessary_checkboxes(3)
-        #upload.file(filename)
+        upload.file()
         fill_out_current_address(address)
         # select_state(state)
         # select_city(city)
@@ -47,7 +47,7 @@ def test_registration_form(browser_preconfig):
         submition_table.should(have.text('07 June,1987'))
         submition_table.should(have.text('Social Studies, Chemistry'))
         submition_table.should(have.text('Sports, Reading, Music'))
-        #submition_table.should(have.text('kitty.jpeg'))
+        submition_table.should(have.text('kitty.jpeg'))
         submition_table.should(have.text(address))
         submition_table.should(have.text('Uttar Pradesh Agra'))
     with allure.step("Attachments"):
