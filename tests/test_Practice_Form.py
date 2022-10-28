@@ -5,8 +5,14 @@ from demoqa_tests.model.controls import checkbox, radio_button, upload, calendar
 from selene.support.shared import browser
 from selene import be, have
 import allure
+from allure_commons.types import Severity
+from utils import attach
 
-
+@allure.tag("web")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "ilyazgo")
+@allure.feature("DemoQA")
+@allure.story("Регистрация пользователя")
 def test_registration_form(browser_preconfig):
     # GIVEN
     with allure.step("Open registrations form"):
@@ -43,3 +49,8 @@ def test_registration_form(browser_preconfig):
         submition_table.should(have.text('kitty.jpeg'))
         submition_table.should(have.text(address))
         submition_table.should(have.text('Uttar Pradesh Agra'))
+    with allure.step("Attachments"):
+        attach.add_screenshot(browser)
+        attach.add_logs(browser)
+        attach.add_html(browser)
+        attach.add_video(browser)
