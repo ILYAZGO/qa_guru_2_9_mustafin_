@@ -6,7 +6,8 @@ from selene.support.shared import browser
 from selene import be, have
 import allure
 from allure_commons.types import Severity
-from utils import attach
+from tests.utils import attach
+
 
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
@@ -32,8 +33,8 @@ def test_registration_form(browser_preconfig):
         checkbox.select_necessary_checkboxes(3)
         upload.file(filename)
         fill_out_current_address(address)
-    # select_state(state)
-    # select_city(city)
+        # select_state(state)
+        # select_city(city)
         select_state_and_city(state, city)
         submit_button.click()
     # THEN
