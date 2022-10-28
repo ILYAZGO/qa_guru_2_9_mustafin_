@@ -11,6 +11,8 @@ def test_registration_form(browser_preconfig):
     # GIVEN
     with allure.step("Open registrations form"):
         given_opened('/automation-practice-form')
+        browser.driver.execute_script("$('footer').remove()")
+        browser.driver.execute_script("$('#fixedban').remove()")
     # WHEN
     with allure.step("Fill form"):
         browser.should(have.title('ToolsQA'))
