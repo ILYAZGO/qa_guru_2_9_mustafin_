@@ -31,7 +31,7 @@ def test_registration_form(browser_preconfig):
         calendar.input(day, month, year)
         fill_out_subject_with_addition(subject1, subject2)
         checkbox.select_necessary_checkboxes(3)
-        upload.file(filename)
+        #upload.file(filename)
         fill_out_current_address(address)
         # select_state(state)
         # select_city(city)
