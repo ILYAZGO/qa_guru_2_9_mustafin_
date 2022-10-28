@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "qa-guru mustafin",
+    "environment": "some env",
+    "comment": "it works",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5455395292:AAEf7S52vzSONAyKH3rGCzWmQhS7b9DOvSQ",
+    "chat": "-1001816026886",
+    "replyTo": ""
+  }
+}
