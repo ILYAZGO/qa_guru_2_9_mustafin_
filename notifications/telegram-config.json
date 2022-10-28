@@ -1,19 +1,11 @@
 {
   "base": {
-<<<<<<< HEAD
     "project": "qa-guru mustafin",
-=======
-    "project": "qa-guru",
->>>>>>> origin/master
     "environment": "some env",
     "comment": "it works",
     "reportLink": "",
     "language": "en",
-<<<<<<< HEAD
     "allureFolder": "allure-report/",
-=======
-    "allureFolder": "build/allure-report/",
->>>>>>> origin/master
     "enableChart": true
   },
   "telegram": {
